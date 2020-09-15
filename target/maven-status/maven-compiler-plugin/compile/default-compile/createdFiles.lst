@@ -1,0 +1,9 @@
+game\PolicyHandler.class
+game\Gift.class
+game\GiftRepository.class
+game\AbstractEvent.class
+game\GiftController.class
+game\GiftApplication.class
+game\AbstractEvent$1.class
+game\Used.class
+game\config\kafka\KafkaProcessor.class
