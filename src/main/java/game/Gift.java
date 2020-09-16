@@ -20,13 +20,6 @@ public class Gift {
         Used used = new Used();
         BeanUtils.copyProperties(this, used);
         used.publishAfterCommit();
-
-        try {
-            Thread.currentThread().sleep((long) (400 + Math.random() * 220));
-        } catch(InterruptedException e) {
-            e.printStackTrace();
-        }
-
     }
 
 
