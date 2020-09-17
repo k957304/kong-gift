@@ -29,6 +29,7 @@ public class Gift {
         // it is NOT A GOOD PRACTICE. instead, Event-Policy mapping is recommended.
 
         game.external.Account account = new game.external.Account();
+        account.setGiftId(this.getId());
         // mappings goes here
         GiftApplication.applicationContext.getBean(game.external.AccountService.class)
                 .add(account);
