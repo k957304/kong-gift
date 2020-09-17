@@ -39,7 +39,7 @@ server:
   port: 8084
 api:
   url:
-    gift: http://localhost:8087
+    payment: http://localhost:8087
 ---
 
 spring:
@@ -67,4 +67,4 @@ spring:
           contentType: application/json
 api:
   url:
-    gift: http://kong-payment:8080
+    payment: http://kong-payment:8080
