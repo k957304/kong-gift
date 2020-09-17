@@ -20,6 +20,19 @@ public class Gift {
         Used used = new Used();
         BeanUtils.copyProperties(this, used);
         used.publishAfterCommit();
+
+        Added added = new Added();
+        BeanUtils.copyProperties(this, added);
+        added.publishAfterCommit();
+
+        //Following code causes dependency to external APIs
+        // it is NOT A GOOD PRACTICE. instead, Event-Policy mapping is recommended.
+
+        game.external.Account account = new game.external.Account();
+        // mappings goes here
+        GiftApplication.applicationContext.getBean(game.external.AccountService.class)
+                .add(account);
+
     }
 
 

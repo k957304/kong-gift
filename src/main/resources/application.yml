@@ -37,6 +37,9 @@ logging:
     org.springframework.cloud: debug
 server:
   port: 8084
+api:
+  url:
+    gift: http://localhost:8087
 ---
 
 spring:
@@ -62,3 +65,6 @@ spring:
         event-out:
           destination: game
           contentType: application/json
+api:
+  url:
+    gift: http://kong-payment:8080
