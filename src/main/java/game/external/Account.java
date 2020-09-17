@@ -4,6 +4,7 @@ public class Account {
 
     private Long id;
     private Long giftId;
+    private String giftStatus;
 
     public Long getId() {
         return id;
@@ -18,4 +19,11 @@ public class Account {
         this.giftId = giftId;
     }
 
+    public String getGiftStatus() {
+        return giftStatus;
+    }
+
+    public void setGiftStatus(String giftStatus) {
+        this.giftStatus = giftStatus;
+    }
 }

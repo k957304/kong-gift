@@ -14,6 +14,15 @@ public class Gift {
     private Long rewardId;
     private Long walletId;
     private String status;
+    private String giftStatus;
+
+    public String getGiftStatus() {
+        return giftStatus;
+    }
+
+    public void setGiftStatus(String giftStatus) {
+        this.giftStatus = giftStatus;
+    }
 
     @PostPersist
     public void onPostPersist(){
@@ -30,6 +39,7 @@ public class Gift {
 
         game.external.Account account = new game.external.Account();
         account.setGiftId(this.getId());
+        account.setGiftStatus("Used");
         // mappings goes here
         GiftApplication.applicationContext.getBean(game.external.AccountService.class)
                 .add(account);
